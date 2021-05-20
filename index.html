@@ -1,11 +1,26 @@
 <html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
 
-<body>
+<body style="hh">
 
 <h1> Wow </h1>
   I do have an actual website elsewhere. It's not that hard to find.
-<h2> hmmm </h2>
-  Here's some text
+  
+<h2>
+slide for a surprise
+
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="360" step="1" value="0" class="slider" id="myRange"> <span id="demo"></span>
+</div>
+</h2>
+
+
+<img src="squid.png">
+
 <h2> what </h2>
   <video controls autoplay> <!-- show controls; play automatically on page load -->
     <source src="KnutVideo2.ogv.ogg" type="video/ogg">
@@ -16,6 +31,23 @@
   protests following George Floyd's murder. Check it out: <br/> <br/>
   
   <a href="https://maminian.github.io/brutality-map/" target=_blank>https://maminian.github.io/brutality-map/</a>
+
+  
+  
+<script>
+
+let root = document.documentElement;
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  root.style.setProperty('--angle', this.value+"deg");
+}
+</script>
+
 </body>
 
 </html>
