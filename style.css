@@ -1,11 +1,21 @@
 :root {
   --angle: 140deg;
+ -webkit-filter: drop-shadow(3px 3px 0px #222)
 }
 
 .hh{
-  -webkit-filter: hue-rotate(var(--angle)) drop-shadow(1px 1px 0px #666);
+  background-color: hsl(180, 30%, 30%);
+  color: hsl(120, 50%, 50%);
+  -webkit-filter: hue-rotate(var(--angle));
+  padding: 0px;
+  margin: 0px;
 }
 
 .slider{
   outline: none;
 }
+/*
+body{
+  background-color: hsl(0, 50%, 50%);
+}
+*/
