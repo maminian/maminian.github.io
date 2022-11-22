@@ -4,7 +4,8 @@
 }
 
 .hh{
-  background-color: hsl(180, 30%, 30%);
+  /*background-color: hsl(180, 30%, 30%);*/
+  background-color: hue-rotate(var(--angle));
   color: hsl(120, 50%, 50%);
   -webkit-filter: hue-rotate(var(--angle));
   padding: 0px;
