@@ -80,7 +80,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
   root.style.setProperty('--angle', this.value+"deg");
-  output.innerHTML.setProperty('background-color', "hue-rotate(var(--angle));");
+  output.innerHTML.body.setProperty('background-color', "hue-rotate(var(--angle));");
 }
 </script>
 
