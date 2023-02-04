@@ -27,12 +27,13 @@
 }
 
 body{
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .main_container{
   font-family: atkinson-hyperlegible;
-  padding: 10px;
+  padding: 2%;
   margin: auto;
   width: 80%;
   color: var(--text1);
@@ -47,12 +48,25 @@ div.swappy{
 	float: right;
 	width: 200px;
 	height: 275px;
+	padding-left: 10px;
+	padding-bottom: 10px;
 	background: url("serious_low.jpg") no-repeat;
 	background-size: 200px 275px;
 }
 div.swappy:hover{
 	background: url("amath_low.jpg") no-repeat;
 	background-size: 200px 275px;
+}
+div.quote{
+  text-align: center; 
+  padding: 10px;
+}
+
+.rich{
+  cursor: url("mclaughlin_rich_2023_mini.jpg"), auto;
+}
+.roberto{
+  cursor: url("camassa_roberto_2023_mini.jpg"), auto;
 }
 
 a:link {
