@@ -50,11 +50,11 @@ div.swappy{
 	height: 275px;
 	padding-left: 10px;
 	padding-bottom: 10px;
-	background: url("serious_low.jpg") no-repeat;
+	background: url("media/serious_low.jpg") no-repeat;
 	background-size: 200px 275px;
 }
 div.swappy:hover{
-	background: url("amath_low.jpg") no-repeat;
+	background: url("media/amath_low.jpg") no-repeat;
 	background-size: 200px 275px;
 }
 div.quote{
@@ -63,10 +63,10 @@ div.quote{
 }
 
 .rich{
-  cursor: url("mclaughlin_rich_2023_mini.jpg"), auto;
+  cursor: url("media/mclaughlin_rich_2023_mini.jpg"), auto;
 }
 .roberto{
-  cursor: url("camassa_roberto_2023_mini.jpg"), auto;
+  cursor: url("media/camassa_roberto_2023_mini.jpg"), auto;
 }
 
 a:link {
