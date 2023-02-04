@@ -1,21 +1,53 @@
 :root {
-  --angle: 283deg;
- -webkit-filter: drop-shadow(3px 3px 0px #222)
+  --text1: #483d3f;
+  --text2: #77685d;
+  --text3: #33a;
+  --main_bg: #f7f7f2;
 }
 
-.hh{
-  background-color: hsl(180, 30%, 30%);
-  color: hsl(120, 50%, 50%);
-  -webkit-filter: hue-rotate(var(--angle));
-  padding: 0px;
-  margin: 0px;
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url("Web Fonts/WOFF/Atkinson-Hyperlegible-Regular-102.woff");
+}
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url("Web Fonts/WOFF/Atkinson-Hyperlegible-Bold-102.woff");
+	font-weight: bold;
+}
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url("Web Fonts/WOFF/Atkinson-Hyperlegible-Italic-102.woff");
+	font-style: italic;
+}
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url("Web Fonts/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff");
+	font-weight: bold;
+	font-style: italic;
 }
 
-.slider{
-  outline: none;
+.main_container{
+  font-family: atkinson-hyperlegible;
+  padding: 10px;
+  margin: auto;
+  width: 80%;
+  color: var(--text1);
+  border-width: 2px;
+  border-color: var(--text1);
+  box-shadow: 3px 3px 5px 5px var(--text1);
+  background-color: var(--main_bg);
 }
-/*
-body{
-  background-color: hsl(0, 50%, 50%);
+
+.sub_container{
+	padding: 5%;
 }
-*/
+
+a:link {
+	color: var(--text2);
+}
+a:visited {
+	color: var(--text3);
+}
+a:hover {
+	color: var(--text3);
+}
