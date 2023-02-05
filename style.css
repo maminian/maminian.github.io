@@ -48,14 +48,17 @@ div.swappy{
 	float: right;
 	width: 200px;
 	height: 275px;
-	padding-left: 10px;
-	padding-bottom: 10px;
-	background: url("media/serious_low.jpg") no-repeat;
-	background-size: 200px 275px;
-}
-div.swappy:hover{
+	margin-left: 10px;
+	margin-bottom: 10px;
 	background: url("media/amath_low.jpg") no-repeat;
 	background-size: 200px 275px;
+}
+img.hidemeonhover{
+	width: 200px;
+	height: 275px;
+}
+img.hidemeonhover:hover{
+	opacity: 0;
 }
 div.quote{
   text-align: center; 
