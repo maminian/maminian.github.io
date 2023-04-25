@@ -1,0 +1,12 @@
+
+body.ohno {
+  filter: invert(80%);
+}
+
+li.ohno {
+  list-style-image: url('./media/squid.png');
+}
+
+div.ohno {
+  transform: scaleY(-1);
+}
