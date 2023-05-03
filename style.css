@@ -1,5 +1,5 @@
 :root {
-  --text1: #483d3f;
+  --text1: #111111;
   --text2: #01baef;
   --text3: #3373ab;
   --main_bg: #f7f7f2;
@@ -81,3 +81,7 @@ a:visited {
 a:hover {
 	color: var(--text3);
 }
+
+
+/* ------------------- */
+
