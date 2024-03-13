@@ -44,15 +44,28 @@ body{
   font-size: 18px;
 }
 
+/* same, but no swap */
+div.headshot{
+	float: right;
+	width: 200px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+img.headshot{
+	width: 200px;
+}
+
+/*
 div.swappy{
 	float: right;
 	width: 200px;
-	height: 275px;
 	margin-left: 10px;
 	margin-bottom: 10px;
 	background: url("media/amath_low.jpg") no-repeat;
 	background-size: 200px 275px;
 }
+
 img.hidemeonhover{
 	width: 200px;
 	height: 275px;
@@ -60,6 +73,8 @@ img.hidemeonhover{
 img.hidemeonhover:hover{
 	opacity: 0;
 }
+*/
+
 div.quote{
   text-align: center; 
   padding: 10px;
