@@ -2,7 +2,7 @@
   --text1: #111111;
   --text2: #01baef;
   --text3: #3373ab;
-  --main_bg: #f7f7f2;
+  --main_bg: #f7f7f2; 
 }
 
 @font-face{
@@ -78,6 +78,16 @@ img.hidemeonhover:hover{
 div.quote{
   text-align: center; 
   padding: 10px;
+}
+
+div.card{
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 40px;
+  width: 600px; /* todo: force content beneath page header and use percentage width */
+  border-style: solid none none solid;
+  border-color: var(--text3);
+  border-width: 2px 0px 0px 5px;
 }
 
 .rich{

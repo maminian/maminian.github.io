@@ -1,0 +1,155 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+<link rel="stylesheet" href="style.css">
+  <title>...</title>
+</head>
+
+<body>
+<div class="main_container">
+
+<h1>
+  It's a website! <a href="index.html">Home</a>
+  <div class="headshot"><img class="headshot" src="media/headshot_feb2024_sm.jpg"></div>
+</h1>
+
+<div style="width:100%; height:1px;">
+    &nbsp;
+</div>
+
+<h2>
+Project ideas
+</h2>
+This is an unstructured list of project ideas; big or small. 
+Is it novel? Did someone do it already? I don't know! But they seem fun.
+
+<div class="card">
+<h3>Fitting nonlinear ODEs to data.</h3>
+Given data from a nonlinear ODE suspected to be the 
+(say, the <a href="https://en.wikipedia.org/wiki/Lorenz_system#Overview" target="_blank">Lorenz system</a>), 
+with data on the interval [0,T], the question is "how much" data is needed 
+to discover the underlying law. 
+<ol>
+    <li> Choose a scheme to approximate/replace the derivatives with numerical values 
+    at each data point;
+    <li> Set and up a linear least squares of polynomial ODE systems;
+    <li> Re-apply solved coefficients and re-simulate the system
+    <li> Estimate error in various senses:
+        <ol>
+            <li> In coefficient space; a 2-norm error of all coefficients used in the fit.
+            <li> In simulated space; a pointwise 2-norm error between data points;
+            <li> In simulated space; a manifold distance (e.g. Wasserstein or other "manifold metric")
+        </ol>
+    <li> Evaluate conditioning of the problem as a function of T.
+    <li> Evaluate anything else as a function of T.
+    <li> Compare to traditional measures of chaotic behavior.
+</ol>
+</div>
+
+<div class="card">
+<h3>Sparsity-based fitting of nonlinear ODEs for compartmental models.</h3>
+In the context of <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology" target=_blank>compartmental models</a> (SIR models and its friends), there is an 
+enormous zoo of models with various underlying assumptions about the pathogen and 
+the behavior of the population. The question is if 
+we can use an "overkill" compartmental model and use sparsity-promoting 
+regularizers/optimization methods to automatically select and identify parameters 
+in the "correct" compartmental model(s) given a set of data. 
+
+This begins/assumes familiarity with the process in the Lorenz problem above...
+<ol>
+    <li> Simulate data from a 1D logistic model S' = -k S(1-S), and see 
+    if the coefficients can be successfully fit and produce qualitatively 
+    similar behavior to the underlying law.
+    <li> Simulate data from a vanilla SIR model and see if the coefficients can be 
+    fit in a similar fashion. 
+    <li> Investigate a tool (e.g. PyTorch, sklearn) which have tools for L1-regularized
+    least-squares problems (e.g. elastic net in sklearn; pytorch may allow for 
+    extending the work to uncharted territory more easily)
+    <li> <b>Side-branch:</b> do a "conservation-based" regularization where 
+    conservation laws are automatically enforced for compartmental models. 
+    For example, dS/dt and dI/dt have equal-but-opposite terms on an SI term; 
+    hence coefficients fit should be exactly equal and opposite.
+    <li> Expand the model fit to e.g. an SEIR model. Have two ground-truth 
+    simulations; one which includes E; the other which doesn't. 
+    Revisit regularization to see if the "E" compartment can be bypassed. 
+    May need a careful formulation to avoid ill-conditioning (coefficients 
+    going to infinity?)
+    <li> If successful, go nuts with the original question.
+    <li> Apply the methods to real data. Evaluate.
+</ol>
+</div>
+
+
+<div class="card">
+<h3>"Florida Man"</h3>
+Is the <a href="https://en.wikipedia.org/wiki/Florida_Man" target=_blank>Florida Man</a> 
+meme quantitatively observable?
+
+This falls under natural language processing (NLP). If you aren't familiar 
+with "Florida Man," read the link above. Basically, bizarre crimes/arrest 
+reports seem to disproportionately come from Florida (a variation is with Ohio). 
+The question is whether one can apply any number of ideas from NLP to 
+measure, state-by-state, prevalence of news reports of crime.
+<ol>
+    <li> Identify an open-data, queryable news service;
+    <li> Apply naive criteria (does an article include a set of words of interest 
+    such as "arrested", "felony", etc), to measure a time sreies of raw counts 
+    of such data, state-by-state
+    <li> Access and apply time series data of state populations and state 
+    socioeconomic characteristics (population, income, wealth, education) to 
+    normalize
+    <li> Visualization; multivariate regression tools to extract a relevant metric
+    per-state; what set of features sufficiently explain inter-state variability?
+    <li> Revisit original criteria and apply more sophisticated tools 
+    (topic modeling; clustering; sentiment analysis; etc)
+</ol>
+</div>
+
+<div class="card">
+<h3>Violin shapes and shape optimization.</h3>
+A good friend recently visited the Musical Instrument Museum in 
+Phoenix, AZ, and saw a curious gometric diagram of an idealized 
+violin due to Antonio Bagatella, constructed with a 
+collection of circular sectors. 
+<ol>
+    <li> Identify a tool (or make it) to define and draw a collection of 
+    circular sectors, identify their intersections, and sketch. 
+    That is, the center, radius, and interval of angles are needed.
+    <li> Begin by attempting to define a simple closed region by a 
+    collection of these. 
+    <li> Discretize and pass off this object to a finite-element (or other 
+    numerical tool) to find the spectrum/vibrational modes of the 2D object.
+    <li> Modularize and expand the tool to pass a set of (center, radii, 
+    sectors) as the input; with output the frequency.
+    <li> Pass this function onto a black-box optimizer; see if shapes can be 
+    designed to fit a prescribed spectrum. See if the prototypical violin shape can be 
+    "rediscovered."
+</old>
+</div>
+
+<div class="card">
+<h3>Fruit-fly connectome data; simulation</h3>
+"Recently," an entire fruit-fly connectome (what neurons connect to which) 
+got mapped and open-sourced; see <a href="https://www.npr.org/2024/10/02/nx-s1-5124734/fruit-fly-brain-connectome-neurons" target=_blank>NPR</a>; <a href="https://www.nature.com/articles/s41586-024-07968-y" target=_blank>network summary statistics paper</a>; <a href="https://flywire.ai/" target=_blank>FlyWire connectome website</a>.
+
+Inspired by questions about how/whether artificial neural nets mimick 
+behavior of neurons, the question is whether this can be seen with 
+"real" connectivity. 
+
+<ol>
+    <li> Access/load/parse connectome data.
+    <li> Do network visualization/summary statistics on all or some subset of the data.
+    <li> Access/learn tools for loading/training artificial neural networks 
+    <li> Take some subset of the fruit fly connectome. With a choice of activation 
+    functions, and a simple objective (maybe image classification or something else)
+    with a <b>fixed NN structure</b>, see to what degree the ANN can succeed in 
+    its task.
+</ol>
+</div>
+
+</div>
+</body>
+
+</html>
