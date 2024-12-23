@@ -26,6 +26,41 @@ This is an unstructured list of project ideas; big or small.
 Is it novel? Did someone do it already? I don't know! But they seem fun.
 
 <div class="card">
+<h3>Mitigating bias in a classifier.</h3>
+Since an increasing number of decisions are being quantified and evaluated 
+based on numerical scores (decisions about recidivism, mortgage applications, 
+etc), it is important to understand whether an ML model can "do both" 
+the task at hand and also avoid disproportionate impact based on 
+protected classes (as defined by Title IX, for example: race/ethnicity, sex, 
+gender, and so on). Studying this with real data is challenging. 
+I don't know what data exists from a practical case-study perspective. 
+But one can treat it as a "toy problem" and go from there:
+<ol>
+    <li> Generate two sets of synthetic data in R^n; with two sets of 
+    labels; the primary, and a "hidden" secondary (an ordinal protected class).
+    <ol>
+        <li> Side-question throughout: how/when should the secondary label be 
+        sampled; should the questions be evaluated based on correlations in 
+        the primary/secondary label; and so on.
+    </ol>
+    <li> Use a toolbox such as sklearn and train a classifier to predict the 
+    primary label. Apply a usual ML process (train/test; evaluation of 
+    confusion matrix; AUCROC for binary).
+    <li> After the model is trained, evaluate the performance on the train/test 
+    data <b>separately</b> depending on the "hidden" label. Investigate and/or 
+    set up a small collection of case studies where the "side-question" above 
+    produces no/some/maximal differences based on the hidden label.
+    <li> Move to a model-training framework that allows for mixed-objective 
+    optimization (for example, PyTorch) which has a loss function on both 
+    the primary, regularized by the secondary, with a regularization parameter.
+    <li> Study the landscape of parameter space in those settings. How/when can 
+    a primary objective (e.g. classification rates, balanced success) remain 
+    "virtually" the same while allowing for improvements on disproportionate 
+    impact on the hidden labels?
+</ol>
+</div>
+
+<div class="card">
 <h3>Fitting nonlinear ODEs to data.</h3>
 Given data from a nonlinear ODE suspected to be the 
 (say, the <a href="https://en.wikipedia.org/wiki/Lorenz_system#Overview" target="_blank">Lorenz system</a>), 
