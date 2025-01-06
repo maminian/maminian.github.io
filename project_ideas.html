@@ -26,6 +26,29 @@ This is an unstructured list of project ideas; big or small.
 Is it novel? Did someone do it already? I don't know! But they seem fun.
 
 <div class="card">
+<h3>Simplified fire containment.</h3>
+In an idealized scenario in two dimensions where fire obeys 
+e.g. a diffusion equation (or a Fisher equation or any other PDE you like), 
+supposing you have a tractor that digs a containment ditch 
+starting at (1,0) and the fire begins with point source at (0,0). 
+You must dig the ditch such that 
+fire does not escape.
+<ul> 
+<li> What is the optimal path (x(t), y(t)) which minimizes the burn area? 
+What shape is the bounded region?
+<li> What is an appropriate way to handle this problem numerically? 
+What does a "greedy" choice of direction u mean when the constraint is only that 
+x(t)=1, y(t)=0 for t>T for some T?
+<li> In nondimensionalizing (which I've done a little bit of by starting the 
+tractor at (1,0)), what are the relevant quantities? If the problem is normalized 
+so that T=1, this is... a PDE constrained boundary value problem for the path 
+(x(t), y(t))?
+<li> Supposing the fire travels at speed 1, what is a necessary requirement 
+for the fire to be containable? Does the tractor need speed 1+\varepsilon 
+for any \varepsilon>0? Is the fire containable with tractor speed 1 in any situation?
+</div>
+
+<div class="card">
 <h3>Mitigating bias in a classifier.</h3>
 Since an increasing number of decisions are being quantified and evaluated 
 based on numerical scores (decisions about recidivism, mortgage applications, 
