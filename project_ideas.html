@@ -223,6 +223,28 @@ behavior of neurons, the question is whether this can be seen with
 </ol>
 </div>
 
+<div class="card">
+<h3>Predicting loss curves for Stochastic Gradient Descent</h3>
+A relatively recent paper by <a href="https://arxiv.org/abs/2102.04396" target="_blank">Paquette et al (2021)</a> derive a cute formula for the normed 
+error of in "training" the weights in an ordinary least squares problem 
+using stochastic gradient descent (SGD). What is cute that the formula 
+relies on an integral equation involving the spectrum of the Hessian 
+of the data matrix. 
+<ul>
+  <li> Set up an SGD process for solving an ordinary least squares problem 
+  using the "streaming" SGD process required.
+  <li> Set up tools to compute this Hessian (or Gramian) of the data matrix. 
+  <li> Set up tools to compute this integral and identify if this works for 
+  e.g. synthetic data (rows sampled from a multivariate normal); or MNIST; or CIFAR-10.
+  <li> These bounds/predictions are for ordinary least squares. Set up a 
+  shallow neural network with a single ReLU activation on the output, for 
+  example, and see how the results compare. 
+  <li> Branch out; are there extremes where this theory succeeds, fails, etc 
+  for general nonlinear models, convolutional nets, etc. I have no idea what 
+  to expect.
+</ul>
+</div>
+
 </div>
 </body>
 
