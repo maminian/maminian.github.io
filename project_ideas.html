@@ -25,24 +25,45 @@ Project ideas
 This is an unstructured list of project ideas; big or small. 
 Is it novel? Did someone do it already? I don't know! But they seem fun.
 
+
 <div class="card">
-<h3>Analysis of trends in SIAM conferences.</h3>
-Topic analysis/NLP/etc relating to SIAM conferences, as measured by 
-posters and/or oral presentations; with the title and/or abstract text.
-One example of a summary (titles/affiliations only) is here: 
-<a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=80900" target="_blank">a poster session from MDS24</a>; this format has more or less persisted for years.
-<ul>
-  <li> (semi-optional): Familiarize with data mining tools; extract as broad/long 
-  a sample of information from conferences as possible
-  <li> (alternative): Communicate with SIAM and obtain tabulated data directly;
-  <li> Beginning with tabulated data, extract features/topics. Quantify trends.
-  <li> Understand representation in presenters/affiliations over time; 
-  spatially distributed; relating to grant awards/prestige.
-</ul>
+<h3>Math data science: predicting loss curves for SGD with Volterra integral equations</h3>
+<i>12 AUG 2025</i> <p>
+
+A relatively recent paper by <a href="https://arxiv.org/abs/2102.04396" target="_blank">Paquette et al (2021)</a> derive a cute formula for the normed 
+error of in "training" the weights in an ordinary least squares problem 
+using stochastic gradient descent (SGD). What is "cute" is that the formula 
+relies on an peculiar "Volterra integral equation" which involves
+an integrand relies on the spectrum (set of eigenvalues) of the Hessian 
+of the data matrix alone. What they produce in this line of work is actual 
+loss curves as a function of epoch, and the smooth curves coming from this 
+theory which overlap. <br>
+
+The catch is that this is done for an ordinary least squares problem; 
+not a nonlinear problem. In other words, most neural networks do not 
+fit into this theory. It would be interesting to see if the theorized curve 
+pans out anyway, or what "inroads" can be made in seeing this theory work for 
+nonlinear problems.
+
+The path would look like:
+<ol>
+  <li> Set up an SGD process for solving an ordinary least squares problem 
+  using the "streaming" SGD process required.
+  <li> Set up tools to compute this Hessian (or Gramian) of the data matrix. 
+  <li> Set up tools to compute this integral and identify if this works for 
+  e.g. synthetic data (rows sampled from a multivariate normal); or MNIST; or CIFAR-10.
+  <li> These bounds/predictions are for ordinary least squares. Set up a 
+  shallow neural network with a single ReLU activation on the output, for 
+  example, and see how the results compare. 
+  <li> Branch out. Are there extremes where this theory succeeds or fails  
+  for general nonlinear models, convolutional nets, etc?
+</ol>
 </div>
 
 <div class="card">
 <h3>Simplified fire containment.</h3>
+<i>06 JAN 2025</i> <p>
+
 In an idealized scenario in two dimensions where fire obeys 
 e.g. a diffusion equation (or a Fisher equation or any other PDE you like), 
 supposing you have a tractor that digs a containment ditch 
@@ -65,7 +86,30 @@ for any \varepsilon>0? Is the fire containable with tractor speed 1 in any situa
 </div>
 
 <div class="card">
+<h3>Analysis of trends in SIAM conferences.</h3>
+<i>23 DEC 2024</i> <p>
+
+This falls under what sometimes is called "science of science."
+
+It would be interesting to do topic analysis, NLP, etc relating to 
+SIAM conferences, as measured by title and/or abstract of 
+posters and/or oral presentations.
+One example of a summary (titles/affiliations only) is here: 
+<a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=80900" target="_blank">a poster session from MDS24</a>; this format has more or less persisted for years.
+<ul>
+  <li> (semi-optional): Familiarize with data mining tools; extract as broad/long 
+  a sample of information from conferences as possible
+  <li> (alternative): Communicate with SIAM and obtain tabulated data directly;
+  <li> Beginning with tabulated data, extract features/topics. Quantify trends.
+  <li> Understand representation in presenters/affiliations over time; 
+  spatially distributed; relating to grant awards/prestige.
+</ul>
+</div>
+
+<div class="card">
 <h3>Mitigating bias in a classifier.</h3>
+<i>23 DEC 2024</i> <p>
+
 Since an increasing number of decisions are being quantified and evaluated 
 based on numerical scores (decisions about recidivism, mortgage applications, 
 etc), it is important to understand whether an ML model can "do both" 
@@ -101,6 +145,8 @@ But one can treat it as a "toy problem" and go from there:
 
 <div class="card">
 <h3>Fitting nonlinear ODEs to data.</h3>
+<i>23 DEC 2024</i> <p>
+
 Given data from a nonlinear ODE suspected to be the 
 (say, the <a href="https://en.wikipedia.org/wiki/Lorenz_system#Overview" target="_blank">Lorenz system</a>), 
 with data on the interval [0,T], the question is "how much" data is needed 
@@ -124,6 +170,8 @@ to discover the underlying law.
 
 <div class="card">
 <h3>Sparsity-based fitting of nonlinear ODEs for compartmental models.</h3>
+<i>23 DEC 2024</i> <p>
+
 In the context of <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology" target=_blank>compartmental models</a> (SIR models and its friends), there is an 
 enormous zoo of models with various underlying assumptions about the pathogen and 
 the behavior of the population. The question is if 
@@ -158,6 +206,8 @@ This begins/assumes familiarity with the process in the Lorenz problem above...
 
 <div class="card">
 <h3>"Florida Man"</h3>
+<i>23 DEC 2024</i> <p>
+
 Is the <a href="https://en.wikipedia.org/wiki/Florida_Man" target=_blank>Florida Man</a> 
 meme quantitatively observable?
 
@@ -183,6 +233,8 @@ measure, state-by-state, prevalence of news reports of crime.
 
 <div class="card">
 <h3>Violin shapes and shape optimization.</h3>
+<i>23 DEC 2024</i> <p>
+
 A good friend recently visited the Musical Instrument Museum in 
 Phoenix, AZ, and saw a curious gometric diagram of an idealized 
 violin due to Antonio Bagatella, constructed with a 
@@ -205,6 +257,8 @@ collection of circular sectors.
 
 <div class="card">
 <h3>Fruit-fly connectome data; simulation</h3>
+<i>23 DEC 2024</i> <p>
+
 "Recently," an entire fruit-fly connectome (what neurons connect to which) 
 got mapped and open-sourced; see <a href="https://www.npr.org/2024/10/02/nx-s1-5124734/fruit-fly-brain-connectome-neurons" target=_blank>NPR</a>; <a href="https://www.nature.com/articles/s41586-024-07968-y" target=_blank>network summary statistics paper</a>; <a href="https://flywire.ai/" target=_blank>FlyWire connectome website</a>.
 
@@ -221,28 +275,6 @@ behavior of neurons, the question is whether this can be seen with
     with a <b>fixed NN structure</b>, see to what degree the ANN can succeed in 
     its task.
 </ol>
-</div>
-
-<div class="card">
-<h3>Predicting loss curves for Stochastic Gradient Descent</h3>
-A relatively recent paper by <a href="https://arxiv.org/abs/2102.04396" target="_blank">Paquette et al (2021)</a> derive a cute formula for the normed 
-error of in "training" the weights in an ordinary least squares problem 
-using stochastic gradient descent (SGD). What is cute that the formula 
-relies on an integral equation involving the spectrum of the Hessian 
-of the data matrix. 
-<ul>
-  <li> Set up an SGD process for solving an ordinary least squares problem 
-  using the "streaming" SGD process required.
-  <li> Set up tools to compute this Hessian (or Gramian) of the data matrix. 
-  <li> Set up tools to compute this integral and identify if this works for 
-  e.g. synthetic data (rows sampled from a multivariate normal); or MNIST; or CIFAR-10.
-  <li> These bounds/predictions are for ordinary least squares. Set up a 
-  shallow neural network with a single ReLU activation on the output, for 
-  example, and see how the results compare. 
-  <li> Branch out; are there extremes where this theory succeeds, fails, etc 
-  for general nonlinear models, convolutional nets, etc. I have no idea what 
-  to expect.
-</ul>
 </div>
 
 </div>
