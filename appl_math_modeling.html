@@ -1,0 +1,74 @@
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+<link rel="stylesheet" href="style.css">
+  <title>...</title>
+</head>
+
+<body>
+<div class="main_container">
+
+<h1>
+  It's a website! <a href="index.html">Home</a>
+  <div class="headshot"><img class="headshot" src="media/headshot_feb2024_sm.jpg"></div>
+</h1>
+
+<h2>
+Some resources relating to preparation for an applied math modeling class 
+(think: working from Strogatz's <i>Nonlinear Dynamics and Chaos</i>).
+</h2>
+
+Mathematical modeling is an umbrella phrase which 
+includes building, analyzing, 
+estimating solutions to, etc, one or more equations which describe 
+a real-world process. The point of it is usually to make predictions or 
+inform decisions made by non-mathematicians. 
+Typically this specializes to dynamical processes (systems which 
+change in time) and so discrete or differential equations for one or more 
+state variables is what we're talking about.
+A body of useful tools such as asymptotics, dimensional analysis and 
+analyzing sizes of parameters, nondimensionalization, etc are also core 
+to this field. 
+
+<p>
+Prerequisite knowledge follows given the phrases 
+"real-world process" and "differential equation" above.
+
+<p>
+Assuming a student is going to be taking a course based on <i>Nonlinear Dynamics and Chaos</i>
+by Strogatz and similar books, this is a reasonable set of topics and resources 
+to prepare:
+
+<ol>
+    <li> <b>Multivariable calculus.</b> Comfort with ideas about vectors, vector fields, critical points are most important. Multivariable chain rule, and ideas from vector calculus such as flux, divergence, and curl, come up too.
+    <li> <b>Linear (and nonlinear) algebra.</b> Some basics of solving simultaneous equations in two or three variables. Often these will be nonlinear - so Gaussian elimination won't work - but instead it'll be a scrappy "do-whatever-you-can" to find solutions. I don't have a reference for this since it's not necessarily linear algebra and moreso principles of algebra. That said, finding eigenvalues (topic from linear algebra) will be important, but mostly in the context of...
+    <li> <b>Ordinary differential equations.</b> This is most important. Topics here include:
+    <ol>
+        <li> understanding what a "solution" means;
+        <li> classification of an ODE (order, linearity, and constant/variable coefficient);
+        <li> intuition around y'=ky with parameter k;
+        <li> working/using direction fields, and Euler's method (graphically and symbolically);
+        <li> first-order separable ODEs;
+        <li> second-order linear constant-coefficient with method of undetermined coefficients;
+        <li> first-order systems of linear differential equations and characteristic equations (finding eigenvalues);
+        <li> converting a higher-order ODE into a system of first-order ODEs.
+        <li> If you've done classification of fixed points of second order constant-coefficient systems, even better.
+        <li> Other classes of ODEs and theory about ODEs are less important.
+    </ol>
+    Virtually all ODE books have these topics. One option here is "Ordinary Differential Equations" by Tenenbaum and Pollard. It's a bit old-fashioned but it's fine. Look at chapters 1.3--1.5, 2.6, 2.8, 4.19--4.21, 6.28--6.30 (important applications); 7.31; 7.34 (see: physics below).
+    
+    <li> Other things (smaller priority):
+    <ol>
+        <li> <b>Programming</b> is not a formal prerequisite, but enhances learning to implement some of these processes; for example exploring phenomena relating to bifurcation. Hence, the programming is mostly about finding numerical solutions to ODEs, plotting, etc; black-box tools are fine (think ode45; scipy.integrate.solve_ivp). Matlab, Python, or Julia are your best options. <a href="https://www.mathworks.com/help/matlab/getting-started-with-matlab.html" target="_blank">Matlab's website has demos</a>. In Python, numpy, scipy, and matplotlib are the three packages which give most of the same functionality as Matlab; for example, <a href="https://numpy.org/doc/stable/user/absolute_beginners.html" target="_blank">documentation for numpy</a>. If you don't know what you like, I'd suggest Python for employability (except for engineering firms, go Matlab). If you don't care, Matlab has a shallower learning curve. Julia's in a gray space but mainly used in some academic communities.
+        <li> <b>Introductory physics</b> is not a prerequisite, but some familiarity about ideas from this class (particularly conservation of energy, potential energy, and gradient/potential vector fields, and spatial reasoning) can help. To be clear, I'm talking about "Physics 101" where you deal with kinetic and potential energy, projectile motion, work, linear and inverse-square gravity; then second semester being electrostatics, magnetism, and circuits.
+        <li> Depending on the course/instructor, formal proof-writing isn't central. Reading and writing logically consistent and coherent arguments interpretable by a classmate is still important, and this strongly overlaps with proof-writing/mathematical argumentation skills. Writing which includes words and diagrams is important, and brevity is not always a good thing. (<i>Being long-winded is not a good thing either.</i>)
+        <li> The "Slopes — Differential equations" by Timothy Lucas, on the app stores and free, is your modern-day equivalent to the pplane/dfield days of yore. A tool like this to quickly visualize/produce/validate sketches of vector fields in the plane is useful in a class like this (yes, overlaps a bit with programming it yourself).
+    </ol>
+</ol>
+
+</div>
+</body>
+
+</html>
