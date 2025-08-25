@@ -25,6 +25,97 @@ Project ideas
 This is an unstructured list of project ideas; big or small. 
 Is it novel? Did someone do it already? I don't know! But they seem fun.
 
+<div class="card">
+<h3>Sparse identification of nonlinear dynamics; incompressible fluids.</h3>
+<i>25 AUG 2025</i><p>
+
+We recently implemented linearly-constrained sparse regression for 
+discovery of differential equations from data for compartmental models. 
+Incompressible fluids in two or three dimensions come with a direct 
+divergence-free constraint such as $u_x + u_y = 0$. Take data from a 
+few solvers for different fluid behaviors/domains that go past 
+Stokes or Navier-Stokes and see if/when the equations with 
+incompressibility can be discovered.
+
+</div>
+
+<div class="card">
+<h3>Reservoir computing. What gives?</h3>
+<i>25 AUG 2025</i><p>
+
+Reservoir computing is a magic tool in the dynamical systems/physics community 
+for fitting to nonlinear dynamics by combining an arbitrary high-dimensional 
+nonlinear embedding and <b>only</b> fitting the linear output weights to the 
+timeseries of interest. What gives? Implement it and study it.
+
+</div>
+
+<div class="card">
+<h3>Robust derivative estimation; SNR parameter studies</h3>
+<i>25 AUG 2025</i><p>
+
+Methods for robustly estimating derivative values in time series 
+given noisy observations are useful for discovery of differential 
+equations from data. Like most things, these aren't "golden bullets" 
+for which any type of data and any type/magnitude of noise can be handled.
+Do a parameter sweep of signal-to-noise ratio for various derivative 
+estimation tools and understand relative performance; dependence 
+on iid vs non-iid noise.
+</div>
+
+<div class="card">
+<h3>Sparse identification of DEs with nonlinear constraints.</h3>
+<i>25 AUG 2025</i><p>
+
+In the context of sparse identification of differential equations from 
+data, I have been developing constrained versions in the context of 
+compartment models (sum of compartment values adds to a constant) which is a 
+linear/subspace constraint on the derivative values, which enables 
+efficient projection based implementations. What does this look like for 
+nonlinear constraints? For example, the linear or nonlinear pendulum. 
+Are there others? How does this work in practice? What about 
+simultaneously finding the conservation as well as the law?
+</div>
+
+
+<div class="card">
+<h3>Graph connectivity/properties of dual graph produced by 
+the tilings produced by aperiodic monotiles.</h3>
+<i>25 AUG 2025</i><p>
+
+Periodic tilings of the plane must produce patterned graphs. 
+For example, rectangular tiles produce a grid. More sophisticated, 
+or two-tile tilings, produce graphs which have predictable degrees 
+sequences/proportions/conditional knowledge. What does this look like 
+for the aperiodic monotile? Develop code to produce sequences of 
+finite tilings and study properties of the graphs. Understand asymptotic 
+behavior as the sequence of finite tilings grows.
+</div>
+
+
+<div class="card">
+<h3>Tokens by language.</h3>
+<i>25 AUG 2025</i><p>
+
+Generating tokens for the purpose of training next-token predictors; 
+language models; etc must be a language-dependent thing. How does this 
+look exactly? What aspects of a language play, agree/disagree with aspects 
+of languages that people understand? For example, consonant-heavy languages.
+
+</div>
+
+
+<div class="card">
+<h3>Reading group, bayesian scientific computing</h3>
+<i>25 AUG 2025</i><p>
+
+Doing a reading group and/or setting up a collection of scientific questions 
+for which Bayesian as well as "traditional" applied math/numerical methods 
+can be applied. Understanding similarities in differences at the algorithm
+or per-iteration of actual implementation level. Understanding differences 
+betweenn theoretical aspects (the ability to sample infinitely from a 
+probability density vs being handed a finite dataset; i.e. empirical density).
+</div>
 
 <div class="card">
 <h3>Math data science: predicting loss curves for SGD with Volterra integral equations</h3>
